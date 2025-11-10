@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk' // adjust to your system
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk'
         PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
     }
 
@@ -39,7 +39,7 @@ pipeline {
             steps {
                 echo "Archiving logs for AI agents..."
                 sh 'mkdir -p logs'
-                sh 'cp -r target/**/*.log logs/'  // capture Maven/Spring logs
+                sh 'cp -r target/**/*.log logs/'  
             }
         }
     }
