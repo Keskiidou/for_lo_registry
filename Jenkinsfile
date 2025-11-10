@@ -31,7 +31,7 @@ pipeline {
         stage('Run App') {
             steps {
                 echo "Starting Spring Boot app..."
-                bat 'start /B mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=dev'
+                bat './mvnw spring-boot:run -Dspring-boot.run.profiles=dev'
             }
         }
 
