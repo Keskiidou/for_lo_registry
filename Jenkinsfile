@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk'
-        PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
+        JAVA_HOME = 'C:\\Java\\jdk-21.0.5'
+        PATH = "${env.JAVA_HOME}\\bin;${env.PATH}"
     }
 
     stages {
@@ -39,7 +39,7 @@ pipeline {
             steps {
                 echo "Archiving logs for AI agents..."
                 bat 'mkdir -p logs'
-                bat 'cp -r target/**/*.log logs/'
+                bat  'cp -r target/**/*.log logs/'
             }
         }
     }
